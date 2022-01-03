@@ -1,7 +1,8 @@
 #!/bin/bash
 
 #Get available files
-availableFiles=$(ls channels/*)
+availableFiles=$(ls channels/)
+availableFiles="${availableFiles##*/}"
 
 #Get user selection
 echo "Available files: (-1 to exit: 'all' for all)"
