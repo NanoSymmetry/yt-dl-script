@@ -1,11 +1,13 @@
 #!/bin/bash
 
 #Get available files
-availableFiles=$(ls channels/channels_to_download*)
+availableFiles=$(ls channels/*)
 
 #Get user selection
-echo "Available files:"
+echo "Available files: (-1 to exit: 'all' for all)"
 select file in $availableFiles; do
+    if [[ $REPLY == '-1' ]]; then exit; fi
+    if [[ $REPLY == 'all' ]]; then file='channels/*'; fi
     break
 done
 
