@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/bin/env bash
 
 #Get available files
 availableFiles=$(ls channels/)
